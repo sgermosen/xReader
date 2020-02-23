@@ -8,11 +8,8 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Realm" Version="4.3.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\NewFolder\" />
+    <PackageReference Include="Xam.Plugins.Forms.Svg" Version="1.0.0.27" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.4.0" />
   </ItemGroup>
 </Project>
