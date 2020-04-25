@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace News.Client.Models
 {
-    public partial class Source : BaseViewModel // Prism.Mvvm.BindableBase
+    public partial class Source : Prism.Mvvm.BindableBase
     {
         [JsonProperty("id")]
         public string Id { get; set; }

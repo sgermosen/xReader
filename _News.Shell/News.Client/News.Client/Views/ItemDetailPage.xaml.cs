@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 
 using News.Client.Models;
 using News.Client.ViewModels;
+using Prism.Navigation;
 
 namespace News.Client.Views
 {
@@ -22,7 +23,7 @@ namespace News.Client.Views
             BindingContext = this.viewModel = viewModel;
         }
 
-        public ItemDetailPage()
+        public ItemDetailPage(INavigationService navi)
         {
             InitializeComponent();
 
@@ -32,7 +33,7 @@ namespace News.Client.Views
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new ItemDetailViewModel(item,  navi);
             BindingContext = viewModel;
         }
     }

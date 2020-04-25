@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\CategoryContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\CountryContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\CustomTabbedPageViewModel.cs" />
+    <Compile Remove="ViewModels\CustomWebViewContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\EverythingContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\FavoriteContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\ItemDetailViewModel.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+    <Compile Remove="ViewModels\LanguageContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\LocalNewsContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\LocalNewsTabbedPageViewModel.cs" />
+    <Compile Remove="ViewModels\MainMasterDetailPageViewModel.cs" />
+    <Compile Remove="ViewModels\MainPageViewModel.cs" />
+    <Compile Remove="ViewModels\RecentContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\SourcesContentPageViewModel.cs" />
+    <Compile Remove="ViewModels\SourcesTabbedPageViewModel.cs" />
+    <Compile Remove="ViewModels\TopHeadlinesContentPageViewModel.cs" />
+    <Compile Remove="Views\AboutPage.xaml.cs" />
+    <Compile Remove="Views\ItemDetailPage.xaml.cs" />
+    <Compile Remove="Views\ItemsPage.xaml.cs" />
+    <Compile Remove="Views\NewItemPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemsPage.xaml" />
+    <EmbeddedResource Remove="Views\NewItemPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
     <PackageReference Include="Realm" Version="4.3.0" />
     <PackageReference Include="Xam.Plugins.Forms.Svg" Version="1.0.0.27" />
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />  

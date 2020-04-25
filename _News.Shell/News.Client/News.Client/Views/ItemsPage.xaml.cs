@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using News.Client.Models;
 using News.Client.Views;
 using News.Client.ViewModels;
+using Prism.Navigation;
 
 namespace News.Client.Views
 {
@@ -19,12 +20,12 @@ namespace News.Client.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
-
-        public ItemsPage()
+        private readonly INavigationService navi;
+        public ItemsPage(INavigationService navi)
         {
             InitializeComponent();
-
-            BindingContext = viewModel = new ItemsViewModel();
+            this.navi = navi;
+            BindingContext = viewModel = new ItemsViewModel( navi );
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -33,7 +34,7 @@ namespace News.Client.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item,navi)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

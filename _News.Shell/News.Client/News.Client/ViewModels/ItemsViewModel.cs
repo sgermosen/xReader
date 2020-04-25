@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using News.Client.Models;
 using News.Client.Views;
+using Prism.Navigation;
 
 namespace News.Client.ViewModels
 {
@@ -15,7 +16,7 @@ namespace News.Client.ViewModels
         public ObservableCollection<Item> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public ItemsViewModel(INavigationService navi) : base(navi)
         {
             Title = "Browse";
             Items = new ObservableCollection<Item>();
